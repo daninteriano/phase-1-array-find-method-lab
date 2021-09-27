@@ -1,9 +1,14 @@
 
 function superbowlWin(record){
-    if (record.result === "W"){
-        return record.year
+    const matchItem = record.find(function(list){
+            return list.result === "W";
+    })
+
+    if (matchItem){
+        return matchItem.year
+    } else {
+        return matchItem
     }
 
 }
-record.find(superbowlWin);
-//const sadReality = "N/A"
+
